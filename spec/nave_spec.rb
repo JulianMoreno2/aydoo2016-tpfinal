@@ -18,6 +18,11 @@ describe 'Nave' do
     expect(nave.chocar_con(nave1)).to eq "200"
   end
 
+  it 'deberia retornar "construido" cuando se crea una nave' do
+    nave = Nave.new
+    expect(nave.obtener_estado).to eq "construido"
+  end
+
   it 'deberia retornar "destruido" de nave1 cuando hago obtener_estado' do
     nave = Nave.new
     nave1 = Nave.new

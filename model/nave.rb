@@ -3,6 +3,7 @@ class Nave
   def initialize
     @vida = "100"
     @masa = "100"
+    @estado = "construido"
   end
 
   def obtener_vida
@@ -25,10 +26,15 @@ class Nave
     @masa = (@masa.to_i + nave.obtener_masa.to_i).to_s
     nave.modificar_vida("0")
     nave.modificar_masa("0")
+    nave.modificar_estado("destruido")
     return @masa
   end
 
   def obtener_estado
-  	return "destruido"
+  	@estado
+  end
+
+  def modificar_estado(estado)
+  	@estado = estado
   end
 end
