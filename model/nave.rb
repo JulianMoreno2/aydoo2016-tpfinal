@@ -12,4 +12,8 @@ class Nave
   def obtener_masa
   	@masa
   end
+
+  def recibir_choque_de(nave)
+    @masa = (@masa.to_i + nave.obtener_masa.to_i).to_s
+  end
 end
