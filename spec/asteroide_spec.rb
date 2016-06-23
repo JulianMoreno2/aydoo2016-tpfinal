@@ -13,4 +13,9 @@ describe 'Asteroide' do
     asteroide = Asteroide.new(100,100)
     expect(asteroide.obtener_masa).to eq 100
   end
+
+  it 'deberia retornar asteroide cuando hago obtener_nombre' do
+    asteroide = Asteroide.new(10,10)
+    expect(asteroide.obtener_nombre).to eq "asteroide"
+  end
 end
