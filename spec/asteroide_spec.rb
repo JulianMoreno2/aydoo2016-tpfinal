@@ -18,4 +18,11 @@ describe 'Asteroide' do
     asteroide = Asteroide.new(10,10)
     expect(asteroide.obtener_nombre).to eq "asteroide"
   end
+  
+  it 'deberia retornar 100 cuando hago chocar_con(asteroide)' do
+    asteroide = Asteroide.new(100,100)
+    asteroide1 = Asteroide.new(100,100)
+    asteroide.mapa_efectos
+    expect(asteroide.chocar_con(asteroide1)).to eq 100
+  end
 end
