@@ -17,4 +17,12 @@ describe 'Bomba' do
     bomba = Bomba.new(10,10)
     expect(bomba.obtener_nombre).to eq "bomba"
   end
+
+  it 'deberia retornar 0 cuando hago chocar_con(bomba)' do
+    bomba = Bomba.new(100,100)
+    bomba1 = Bomba.new(100,100)
+    bomba.mapa_efectos
+    expect(bomba.chocar_con(bomba1)).to eq 0
+  end
+
 end
