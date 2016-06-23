@@ -3,7 +3,7 @@ require_relative '../model/objeto_espacial'
 class Misil < ObjetoEspacial
 
   def mapa_efectos
-    @hash_map = {"misil" => EfectoDestructivo.new(100), "nave" => EfectoDestructivo.new(100)}
+    @hash_map = {"misil" => EfectoDestructivo.new(100), "nave" => EfectoDestructivo.new(100), "bomba" => EfectoDestructivo.new(0)}
   end
 
   def chocar_con(objeto_espacial)

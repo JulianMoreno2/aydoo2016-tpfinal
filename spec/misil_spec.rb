@@ -38,5 +38,12 @@ describe 'Misil' do
     misil.mapa_efectos
     expect(misil.chocar_con(nave)).to eq 100
   end
+
+  it 'deberia retornar 200 cuando misil choca_con(bomba)' do
+    bomba = Bomba.new(100,100)
+    misil = Misil.new(200,100)
+    misil.mapa_efectos
+    expect(misil.chocar_con(bomba)).to eq 200
+  end
   
 end
