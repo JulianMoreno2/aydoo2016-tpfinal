@@ -14,6 +14,11 @@ describe 'Nave' do
     expect(nave.obtener_masa).to eq 100
   end
 
+  it 'deberia retornar nave cuando hago obtener_nombre' do
+    nave = Nave.new(10,10)
+    expect(nave.obtener_nombre).to eq "nave"
+  end
+
   it 'deberia retornar 0 cuando hago chocar_con(nave)' do
     nave = Nave.new(100,100)
     nave1 = Nave.new(100,100)
