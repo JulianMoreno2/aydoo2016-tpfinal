@@ -12,4 +12,9 @@ describe 'Bomba' do
     bomba = Bomba.new(100,100)
     expect(bomba.obtener_masa).to eq 100
   end
+  
+  it 'deberia retornar bomba cuando hago obtener_nombre' do
+    bomba = Bomba.new(10,10)
+    expect(bomba.obtener_nombre).to eq "bomba"
+  end
 end

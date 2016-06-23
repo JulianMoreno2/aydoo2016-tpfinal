@@ -3,7 +3,6 @@ class ObjetoEspacial
   def initialize(vida, masa)
     @vida = vida
     @masa = masa
-    @estado = "construido"
   end
 
   def obtener_vida
