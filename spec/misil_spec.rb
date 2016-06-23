@@ -20,11 +20,18 @@ describe 'Misil' do
     expect(misil.chocar_con(misil1)).to eq 0
   end
 
-  it 'deberia retornar 20 cuando misil choca_con(nave)' do
+  it 'deberia retornar 0 cuando misil choca_con(nave)' do
     nave = Nave.new(100,100)
     misil = Misil.new(100,100)
     misil.mapa_efectos
     expect(misil.chocar_con(nave)).to eq 0
   end
 
+  it 'deberia retornar 100 cuando misil choca_con(nave)' do
+    nave = Nave.new(100,100)
+    misil = Misil.new(200,100)
+    misil.mapa_efectos
+    expect(misil.chocar_con(nave)).to eq 100
+  end
+  
 end
