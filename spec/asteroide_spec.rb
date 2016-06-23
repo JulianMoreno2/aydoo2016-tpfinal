@@ -1,0 +1,10 @@
+require 'rspec'
+require_relative '../model/asteroide'
+require_relative '../model/objeto_espacial'
+
+describe 'Asteroide' do
+  it 'deberia retornar 100 cuando hago obtener_vida de un asteoroide nuevo' do
+    asteroide = Asteroide.new(100, 0)
+    expect(asteroide.obtener_vida).to eq 100
+  end
+end
