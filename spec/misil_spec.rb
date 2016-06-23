@@ -13,20 +13,25 @@ describe 'Misil' do
     expect(misil.obtener_masa).to eq 100
   end
 
+  it 'deberia retornar misil cuando hago obtener_nombre' do
+    misil = Misil.new(10,10)
+    expect(misil.obtener_nombre).to eq "misil"
+  end
+  
   it 'deberia retornar 0 cuando hago chocar_con(misil)' do
     misil = Misil.new(100,100)
     misil1 = Misil.new(100,100)
     misil.mapa_efectos
     expect(misil.chocar_con(misil1)).to eq 0
   end
-
+  
   it 'deberia retornar 0 cuando misil choca_con(nave)' do
     nave = Nave.new(100,100)
     misil = Misil.new(100,100)
     misil.mapa_efectos
     expect(misil.chocar_con(nave)).to eq 0
   end
-
+  
   it 'deberia retornar 100 cuando misil choca_con(nave)' do
     nave = Nave.new(100,100)
     misil = Misil.new(200,100)
