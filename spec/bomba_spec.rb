@@ -24,5 +24,12 @@ describe 'Bomba' do
     bomba.mapa_efectos
     expect(bomba.chocar_con(bomba1)).to eq 0
   end
+  
+  it 'deberia retornar 0 cuando bomba choca_con(nave)' do
+    nave = Nave.new(100,100)
+    bomba = Bomba.new(100,100)
+    bomba.mapa_efectos
+    expect(bomba.chocar_con(nave)).to eq 0
+  end
 
 end
