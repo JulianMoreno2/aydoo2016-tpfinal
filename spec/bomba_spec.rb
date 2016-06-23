@@ -32,7 +32,7 @@ describe 'Bomba' do
     expect(bomba.chocar_con(nave)).to eq 0
   end
 
-  it 'deberia retornar 0 cuando bomba choca_con(misil)' do
+  it 'deberia retornar 50 cuando bomba choca_con(misil)' do
     misil = Misil.new(100,100)
     bomba = Bomba.new(100,100)
     bomba.mapa_efectos

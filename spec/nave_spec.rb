@@ -33,4 +33,11 @@ describe 'Nave' do
     expect(nave.chocar_con(misil)).to eq 20
   end
 
+  it 'deberia retornar 30 cuando nave choca_con(bomba)' do
+    nave = Nave.new(80,100)
+    bomba = Bomba.new(100,80)
+    nave.mapa_efectos
+    expect(nave.chocar_con(bomba)).to eq 30
+  end
+
 end
