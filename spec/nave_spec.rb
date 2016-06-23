@@ -1,32 +1,31 @@
 require 'rspec'
 require_relative '../model/nave'
+require_relative '../model/misil'
+require_relative '../model/objeto_espacial'
 
 describe 'Nave' do
   it 'deberia retornar 100 cuando hago obtener_vida de una nave nueva' do
-    nave = Nave.new
-    expect(nave.obtener_vida).to eq "100"
+    nave = Nave.new(100, 0)
+    expect(nave.obtener_vida).to eq 100
   end
 
   it 'deberia retornar 100 cuando hago obtener_masa de una nave nueva' do
-    nave = Nave.new
-    expect(nave.obtener_masa).to eq "100"
+    nave = Nave.new(100,100)
+    expect(nave.obtener_masa).to eq 100
   end
 
-  it 'deberia retornar 200 cuando hago chocar_con(nave)' do
-    nave = Nave.new
-    nave1 = Nave.new
-    expect(nave.chocar_con(nave1)).to eq "200"
+  it 'deberia retornar 0 cuando hago chocar_con(nave)' do
+    nave = Nave.new(100,100)
+    nave1 = Nave.new(100,100)
+    nave.mapa_efectos
+    expect(nave.chocar_con(nave1)).to eq 0
   end
 
-  it 'deberia retornar "construido" cuando se crea una nave' do
-    nave = Nave.new
-    expect(nave.obtener_estado).to eq "construido"
+  it 'deberia retornar 20 cuando nave choca_con(misil)' do
+    nave = Nave.new(100,100)
+    misil = Misil.new(100,80)
+    nave.mapa_efectos
+    expect(nave.chocar_con(misil)).to eq 20
   end
 
-  it 'deberia retornar "destruido" de nave1 cuando hago obtener_estado' do
-    nave = Nave.new
-    nave1 = Nave.new
-    masa_nave = nave.chocar_con(nave1)
-    expect(nave1.obtener_estado).to eq "destruido"
-  end
 end

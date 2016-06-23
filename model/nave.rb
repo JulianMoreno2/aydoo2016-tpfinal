@@ -1,40 +1,17 @@
-class Nave
+require_relative '../model/objeto_espacial'
+require_relative '../model/efecto_destructivo'
 
-  def initialize
-    @vida = "100"
-    @masa = "100"
-    @estado = "construido"
+class Nave < ObjetoEspacial
+
+  def mapa_efectos
+    @hash_map = {"nave" => EfectoDestructivo.new(100), "misil" => EfectoDestructivo.new(80)}
   end
 
-  def obtener_vida
-    @vida
+  def chocar_con(objeto_espacial)
+    @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(@vida)
   end
 
-  def obtener_masa
-  	@masa
-  end
-
-  def modificar_vida(vida)
-  	@vida = vida
-  end
-
-  def modificar_masa(masa)
-    @masa = masa
-  end
-
-  def chocar_con(nave)
-    @masa = (@masa.to_i + nave.obtener_masa.to_i).to_s
-    nave.modificar_vida("0")
-    nave.modificar_masa("0")
-    nave.modificar_estado("destruido")
-    return @masa
-  end
-
-  def obtener_estado
-  	@estado
-  end
-
-  def modificar_estado(estado)
-  	@estado = estado
+  def obtener_nombre
+    return "nave"
   end
 end
