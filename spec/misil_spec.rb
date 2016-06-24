@@ -21,14 +21,12 @@ describe 'Misil' do
   it 'deberia retornar 0 cuando hago chocar_con(misil)' do
     misil = Misil.new(100,100)
     misil1 = Misil.new(100,100)
-    misil.mapa_efectos
     expect(misil.chocar_con(misil1)).to eq 0
   end
   
   it 'deberia retornar 0 cuando misil choca_con(nave)' do
     nave = Nave.new(100,100)
     misil = Misil.new(100,100)
-    misil.mapa_efectos
     expect(misil.chocar_con(nave)).to eq 0
   end
   
@@ -42,21 +40,18 @@ describe 'Misil' do
   it 'deberia retornar 200 cuando misil choca_con(bomba)' do
     bomba = Bomba.new(100,100)
     misil = Misil.new(200,100)
-    misil.mapa_efectos
     expect(misil.chocar_con(bomba)).to eq 200
   end
 
   it 'deberia retornar 150 cuando misil choca_con(asteroide)' do
     asteroide = Asteroide.new(100,100)
     misil = Misil.new(150,100)
-    misil.mapa_efectos
     expect(misil.chocar_con(asteroide)).to eq 150
   end
 
   it 'deberia retornar 150 cuando misil choca_con(estrella)' do
     estrella = Estrella.new(100,100)
     misil = Misil.new(150,100)
-    misil.mapa_efectos
     expect(misil.chocar_con(estrella)).to eq 150
   end
   

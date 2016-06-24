@@ -22,35 +22,38 @@ describe 'Nave' do
   it 'deberia retornar 0 cuando hago chocar_con(nave)' do
     nave = Nave.new(100,100)
     nave1 = Nave.new(100,100)
-    nave.mapa_efectos
     expect(nave.chocar_con(nave1)).to eq 0
   end
 
   it 'deberia retornar 20 cuando nave choca_con(misil)' do
     nave = Nave.new(100,100)
     misil = Misil.new(100,80)
-    nave.mapa_efectos
     expect(nave.chocar_con(misil)).to eq 20
   end
 
   it 'deberia retornar 30 cuando nave choca_con(bomba)' do
     nave = Nave.new(80,100)
     bomba = Bomba.new(100,80)
-    nave.mapa_efectos
     expect(nave.chocar_con(bomba)).to eq 30
   end
 
   it 'deberia retornar 50 cuando nave choca_con(asteroide)' do
     nave = Nave.new(100,100)
     asteroide = Asteroide.new(100,100)
-    nave.mapa_efectos
-    expect(nave.chocar_con(asteroide)).to eq 50
+    nave.chocar_con(asteroide)
+    expect(nave.obtener_masa).to eq 50
   end
   
   it 'deberia retornar 200 cuando nave choca_con(estrella)' do
     nave = Nave.new(100,180)
     estrella = Estrella.new(100,100)
-    nave.mapa_efectos
     expect(nave.chocar_con(estrella)).to eq 280
+  end
+
+  it 'deberia retornar 0 cuando nave choca_con(nave1) nave1 pierde 100 unidades' do
+    nave = Nave.new(100,80)
+    nave1 = Nave.new(200,50)
+    nave.chocar_con(nave1)
+    expect(nave1.obtener_vida).to eq 100
   end
 end
