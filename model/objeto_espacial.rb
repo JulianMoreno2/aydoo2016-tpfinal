@@ -3,6 +3,7 @@ class ObjetoEspacial
   def initialize(vida, masa)
     @vida = vida
     @masa = masa
+    @estado = EstadoConstruido.new
   end
 
   def obtener_vida
@@ -21,6 +22,10 @@ class ObjetoEspacial
     @masa = masa
   end
   
+  def obtener_estado
+    @estado
+  end
+  
   def chocar_con(objeto_espacial)
     mapa_efectos
     objeto_espacial.mapa_efectos
@@ -31,5 +36,5 @@ class ObjetoEspacial
   def recibe_choque_de(objeto_espacial)
     @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(self,objeto_espacial)
   end
-    
+
 end
