@@ -45,4 +45,11 @@ describe 'Bomba' do
     bomba.mapa_efectos
     expect(bomba.chocar_con(asteroide)).to eq 0
   end
+
+  it 'deberia retornar 0 cuando bomba choca_con(asteroide) diferencia de vida' do
+    asteroide = Asteroide.new(200,100)
+    bomba = Bomba.new(300,100)
+    bomba.mapa_efectos
+    expect(bomba.chocar_con(asteroide)).to eq 0
+  end
 end
