@@ -70,4 +70,12 @@ describe 'Nave' do
     nave.chocar_con(bomba)
     expect(bomba.obtener_vida).to eq 50
   end
+  
+  it 'deberia retornar 150 cuando nave choca_con(bomba) bomba pierde 100 unidades' do
+    nave = Nave.new(100,80)
+    bomba = Bomba.new(150,50)
+    nave.chocar_con(bomba)
+    expect(bomba.obtener_vida).to eq 50
+  end
+  
 end
