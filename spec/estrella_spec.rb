@@ -46,4 +46,11 @@ describe 'Estrella' do
     estrella.mapa_efectos
     expect(estrella.chocar_con(misil)).to eq 200
   end
+
+  it 'deberia retornar 0 cuando nave choca_con(nave)' do
+    estrella = Estrella.new(200,100)
+    nave = Nave.new(100,80)
+    estrella.mapa_efectos
+    expect(estrella.chocar_con(nave)).to eq 0
+  end
 end
