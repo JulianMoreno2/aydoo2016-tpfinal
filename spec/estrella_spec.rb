@@ -19,4 +19,11 @@ describe 'Estrella' do
     expect(estrella.obtener_nombre).to eq "estrella"
   end
 
+  it 'deberia retornar 0 cuando hago chocar_con(estrella)' do
+    estrella = Estrella.new(300,100)
+    estrella1 = Estrella.new(200,100)
+    estrella.mapa_efectos
+    expect(estrella.chocar_con(estrella1)).to eq 0
+  end
+
 end
