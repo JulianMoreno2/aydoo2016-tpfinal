@@ -26,28 +26,28 @@ describe 'Estrella' do
     expect(estrella.chocar_con(estrella1)).to eq 0
   end
 
-  it 'deberia retornar 0 cuando nave choca_con(asteroide)' do
+  it 'deberia retornar 0 cuando estrella choca_con(asteroide)' do
     estrella = Estrella.new(200,100)
     asteroide = Asteroide.new(100,80)
     estrella.mapa_efectos
     expect(estrella.chocar_con(asteroide)).to eq 0
   end
 
-  it 'deberia retornar 0 cuando nave choca_con(bomba)' do
+  it 'deberia retornar 0 cuando estrella choca_con(bomba)' do
     estrella = Estrella.new(200,100)
     bomba = Bomba.new(100,80)
     estrella.mapa_efectos
     expect(estrella.chocar_con(bomba)).to eq 0
   end
 
-  it 'deberia retornar 200 cuando nave choca_con(misil)' do
+  it 'deberia retornar 200 cuando estrella choca_con(misil)' do
     estrella = Estrella.new(200,100)
     misil = Misil.new(100,80)
     estrella.mapa_efectos
     expect(estrella.chocar_con(misil)).to eq 200
   end
 
-  it 'deberia retornar 0 cuando nave choca_con(nave)' do
+  it 'deberia retornar 0 cuando estrella choca_con(nave)' do
     estrella = Estrella.new(200,100)
     nave = Nave.new(100,80)
     estrella.mapa_efectos

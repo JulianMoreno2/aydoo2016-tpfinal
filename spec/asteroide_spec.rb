@@ -19,32 +19,39 @@ describe 'Asteroide' do
     expect(asteroide.obtener_nombre).to eq "asteroide"
   end
   
-  it 'deberia retornar 100 cuando hago chocar_con(asteroide)' do
+  it 'deberia retornar 100 cuando asteroide chocar_con(asteroide)' do
     asteroide = Asteroide.new(100,100)
     asteroide1 = Asteroide.new(100,100)
     asteroide.mapa_efectos
     expect(asteroide.chocar_con(asteroide1)).to eq 100
   end
 
-  it 'deberia retornar 100 cuando hago chocar_con(bomba)' do
+  it 'deberia retornar 100 cuando asteroide chocar_con(bomba)' do
     asteroide = Asteroide.new(100,100)
     bomba = Bomba.new(100,100)
     asteroide.mapa_efectos
     expect(asteroide.chocar_con(bomba)).to eq 100
   end
 
-  it 'deberia retornar 100 cuando hago chocar_con(misil)' do
+  it 'deberia retornar 100 cuando asteroide chocar_con(misil)' do
     asteroide = Asteroide.new(100,100)
     misil = Misil.new(100,100)
     asteroide.mapa_efectos
     expect(asteroide.chocar_con(misil)).to eq 100
   end
 
-  it 'deberia retornar 110 cuando hago chocar_con(nave)' do
+  it 'deberia retornar 110 cuando asteroide chocar_con(nave)' do
     asteroide = Asteroide.new(100,100)
     nave = Nave.new(100,100)
     asteroide.mapa_efectos
     asteroide.chocar_con(nave)
     expect(asteroide.obtener_masa).to eq 110
+  end
+
+   it 'deberia retornar 40 cuando asteroide chocar_con(estrella)' do
+    asteroide = Asteroide.new(40,100)
+    estrella = Estrella.new(100,100)
+    asteroide.mapa_efectos
+    expect(asteroide.chocar_con(estrella)).to eq 40
   end
 end
