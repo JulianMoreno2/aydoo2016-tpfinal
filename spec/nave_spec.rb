@@ -56,4 +56,11 @@ describe 'Nave' do
     nave.chocar_con(nave1)
     expect(nave1.obtener_vida).to eq 100
   end
+
+  it 'deberia retornar 200 cuando nave choca_con(misil) misil pierde 100 unidades' do
+    nave = Nave.new(100,80)
+    misil = Misil.new(300,50)
+    nave.chocar_con(misil)
+    expect(misil.obtener_vida).to eq 200
+  end
 end
