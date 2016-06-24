@@ -46,5 +46,11 @@ describe 'Nave' do
     nave.mapa_efectos
     expect(nave.chocar_con(asteroide)).to eq 50
   end
-
+  
+  it 'deberia retornar 200 cuando nave choca_con(estrella)' do
+    nave = Nave.new(100,180)
+    estrella = Estrella.new(100,100)
+    nave.mapa_efectos
+    expect(nave.chocar_con(estrella)).to eq 280
+  end
 end
