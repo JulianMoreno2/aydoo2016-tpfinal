@@ -46,5 +46,4 @@ describe 'Estrella' do
     estrella.mapa_efectos
     expect(estrella.chocar_con(misil)).to eq 200
   end
-
 end
