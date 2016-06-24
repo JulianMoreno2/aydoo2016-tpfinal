@@ -40,7 +40,7 @@ describe 'Nave' do
     expect(nave.chocar_con(bomba)).to eq 30
   end
 
-  it 'deberia retornar 30 cuando nave choca_con(asteroide)' do
+  it 'deberia retornar 50 cuando nave choca_con(asteroide)' do
     nave = Nave.new(100,100)
     asteroide = Asteroide.new(100,100)
     nave.mapa_efectos
