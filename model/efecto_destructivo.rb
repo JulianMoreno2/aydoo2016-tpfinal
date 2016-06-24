@@ -4,11 +4,11 @@ class EfectoDestructivo
   	@vida_destruida = vida_destruida
   end
 
-  def ejecutar_efecto(vida)
-    vida = vida - @vida_destruida
-    if vida < 0
-    	vida = 0
+  def ejecutar_efecto(objeto1,objeto2)
+    objeto1.modificar_vida(objeto1.obtener_vida - @vida_destruida)
+    if objeto1.obtener_vida < 0
+    	objeto1.modificar_vida(0)
     end
-    return vida
+    return objeto1.obtener_vida
   end
 end

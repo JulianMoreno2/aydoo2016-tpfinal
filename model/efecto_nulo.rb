@@ -4,8 +4,8 @@ class EfectoNulo
   	@vida_destruida = vida_destruida
   end
 
-  def ejecutar_efecto(vida)
-    return vida
+  def ejecutar_efecto(objeto1, objeto2)
+    return objeto1.obtener_vida
   end
 
 end

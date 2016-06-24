@@ -8,7 +8,7 @@ class Nave < ObjetoEspacial
   end
 
   def chocar_con(objeto_espacial)
-    @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(@vida)
+    @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(self,objeto_espacial)
   end
 
   def obtener_nombre
