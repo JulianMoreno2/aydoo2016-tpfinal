@@ -52,5 +52,12 @@ describe 'Misil' do
     misil.mapa_efectos
     expect(misil.chocar_con(asteroide)).to eq 150
   end
+
+  it 'deberia retornar 150 cuando misil choca_con(estrella)' do
+    estrella = Estrella.new(100,100)
+    misil = Misil.new(150,100)
+    misil.mapa_efectos
+    expect(misil.chocar_con(estrella)).to eq 150
+  end
   
 end
