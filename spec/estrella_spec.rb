@@ -13,4 +13,10 @@ describe 'Estrella' do
     estrella = Estrella.new(100,100)
     expect(estrella.obtener_masa).to eq 100
   end
+  
+  it 'deberia retornar estrella cuando hago obtener_nombre' do
+    estrella = Estrella.new(10,10)
+    expect(estrella.obtener_nombre).to eq "estrella"
+  end
+
 end
