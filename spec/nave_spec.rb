@@ -84,4 +84,5 @@ describe 'Nave' do
     nave.chocar_con(estrella)
     expect(estrella.obtener_vida).to eq 0
   end
+
 end
