@@ -1,4 +1,5 @@
 require 'rspec'
+require 'spec_helper'
 require_relative '../model/nave'
 require_relative '../model/misil'
 require_relative '../model/objeto_espacial'
@@ -40,6 +41,13 @@ describe 'Nave' do
     expect(nave.obtener_vida).to eq 30
   end
 
+  it 'deberia retornar 0 cuando nave choca_con(bomba) y la nave tiene menos de 50 de vida' do
+    nave = Nave.new(40,100)
+    bomba = Bomba.new(100,80)
+    nave.chocar_con(bomba)
+    expect(nave.obtener_vida).to eq 0
+  end
+  
   it 'deberia retornar 50 cuando nave choca_con(asteroide)' do
     nave = Nave.new(100,100)
     asteroide = Asteroide.new(100,100)

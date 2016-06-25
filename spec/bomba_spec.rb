@@ -1,4 +1,5 @@
 require 'rspec'
+require 'spec_helper'
 require_relative '../model/bomba'
 require_relative '../model/objeto_espacial'
 
