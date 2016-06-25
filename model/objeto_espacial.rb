@@ -31,10 +31,12 @@ class ObjetoEspacial
   end
   
   def chocar_con(objeto_espacial)
-    mapa_efectos
-    objeto_espacial.mapa_efectos
-    objeto_espacial.recibe_choque_de(self)
-    self.recibe_choque_de(objeto_espacial)
+    if self.obtener_vida != 0 && objeto_espacial.obtener_vida != 0
+      mapa_efectos
+      objeto_espacial.mapa_efectos
+      objeto_espacial.recibe_choque_de(self)
+      self.recibe_choque_de(objeto_espacial)
+    end
   end
   
   def recibe_choque_de(objeto_espacial)

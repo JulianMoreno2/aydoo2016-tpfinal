@@ -96,4 +96,10 @@ describe 'Nave' do
     expect(nave.obtener_estado.mostrar).to eq "destruido"
   end
   
+  it 'deberia retornar 120 cuando nave choca con un objeto espacial destruido' do
+    nave = Nave.new(120,100)
+    nave1 = Nave.new(0,100)
+    nave.chocar_con(nave1)
+    expect(nave.obtener_vida).to eq 120
+  end
 end
