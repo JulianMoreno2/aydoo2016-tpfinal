@@ -1,4 +1,4 @@
-require_relative '../model/numero_invalido_exception'
+require_relative '../excepciones/numero_invalido_exception'
 
 class ObjetoEspacial
 

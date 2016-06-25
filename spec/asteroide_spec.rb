@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/asteroide'
-require_relative '../model/objeto_espacial'
+require_relative '../model/dominio/asteroide'
+require_relative '../model/dominio/objeto_espacial'
 
 describe 'Asteroide' do
 

@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/estado_construido'
-require_relative '../model/estado_destruido'
+require_relative '../model/estados/estado_construido'
+require_relative '../model/estados/estado_destruido'
 
 describe 'Estado' do
   

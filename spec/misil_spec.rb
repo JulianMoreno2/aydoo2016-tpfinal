@@ -1,7 +1,7 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/misil'
-require_relative '../model/objeto_espacial'
+require_relative '../model/dominio/misil'
+require_relative '../model/dominio/objeto_espacial'
 
 describe 'Misil' do
   it 'deberia retornar 100 cuando hago obtener_vida de un misil nuevo' do

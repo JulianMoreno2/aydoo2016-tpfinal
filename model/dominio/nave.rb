@@ -1,7 +1,7 @@
-require_relative '../model/objeto_espacial'
-require_relative '../model/efecto_destructivo'
-require_relative '../model/efecto_masa'
-require_relative '../model/efecto_constructor'
+require_relative '../dominio/objeto_espacial'
+require_relative '../efectos/efecto_destructivo'
+require_relative '../efectos/efecto_masa'
+require_relative '../efectos/efecto_constructor'
 
 class Nave < ObjetoEspacial
   

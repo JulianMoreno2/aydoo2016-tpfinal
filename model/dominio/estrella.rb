@@ -1,4 +1,6 @@
-require_relative '../model/objeto_espacial'
+require_relative '../dominio/objeto_espacial'
+require_relative '../efectos/efecto_destructivo'
+require_relative '../efectos/efecto_nulo'
 
 class Estrella < ObjetoEspacial
 

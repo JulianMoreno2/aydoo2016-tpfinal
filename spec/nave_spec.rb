@@ -1,8 +1,8 @@
 require 'rspec'
 require 'spec_helper'
-require_relative '../model/nave'
-require_relative '../model/misil'
-require_relative '../model/objeto_espacial'
+require_relative '../model/dominio/nave'
+require_relative '../model/dominio/misil'
+require_relative '../model/dominio/objeto_espacial'
 
 describe 'Nave' do
   it 'deberia retornar 100 cuando hago obtener_vida de una nave nueva' do
