@@ -3,6 +3,7 @@ require 'spec_helper'
 require_relative '../model/dominio/objeto_espacial'
 
 describe 'ObjetoEspacial' do
+  
   it 'deberia retornar 100 cuando hago obtener_vida de un objeto espacial' do
     objEspacial = ObjetoEspacial.new
     expect(objEspacial.obtener_vida).to eq 100

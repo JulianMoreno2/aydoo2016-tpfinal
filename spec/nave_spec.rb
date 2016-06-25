@@ -43,7 +43,7 @@ describe 'Nave' do
 
   it 'deberia retornar 0 cuando nave choca_con(bomba) y la nave tiene menos de 50 de vida' do
     nave = Nave.new
-    nave.modificar_vida(50)
+    nave.modificar_vida(10)
     bomba = Bomba.new
     nave.chocar_con(bomba)
     expect(nave.obtener_vida).to eq 0
