@@ -38,4 +38,9 @@ describe 'ObjetoEspacial' do
     expect { objEspacial.modificar_vida(-100) }.to raise_error(NumeroInvalidoException)
   end
 
+  it 'deberia ejecutar excepcion numero invalido cuando se modifica la masa a un numero menor a cero' do
+    objEspacial = ObjetoEspacial.new     
+    expect { objEspacial.modificar_masa(-100) }.to raise_error(NumeroInvalidoException)
+  end
+
 end

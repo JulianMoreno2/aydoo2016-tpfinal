@@ -24,6 +24,9 @@ class ObjetoEspacial
   end
 
   def modificar_masa(masa)
+    if masa < 0
+      raise NumeroInvalidoException, "La masa ingresada debe ser mayor a cero"
+    end
     @masa = masa
   end
   
