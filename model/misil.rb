@@ -5,11 +5,7 @@ require_relative '../model/efecto_nulo'
 class Misil < ObjetoEspacial
 
   def mapa_efectos
-    @hash_map = {"misil" => EfectoDestructivo.new(100), "nave" => EfectoDestructivo.new(100), "bomba" => EfectoNulo.new(0), "asteroide" => EfectoNulo.new(0), "estrella" => EfectoNulo.new(0)}
-  end
-  
-  def obtener_nombre
-    return "misil"
+    @hash_map = {Misil => EfectoDestructivo.new(100), Nave => EfectoDestructivo.new(100), Bomba => EfectoNulo.new(0), Asteroide => EfectoNulo.new(0), Estrella => EfectoNulo.new(0)}
   end
 
 end

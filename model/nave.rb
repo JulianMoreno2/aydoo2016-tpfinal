@@ -6,10 +6,7 @@ require_relative '../model/efecto_constructor'
 class Nave < ObjetoEspacial
 
   def mapa_efectos
-    @hash_map = {"nave" => EfectoDestructivo.new(100), "misil" => EfectoDestructivo.new(80), "bomba" => EfectoDestructivo.new(50), "asteroide" => EfectoMasa.new(10,50), "estrella" => EfectoConstructor.new}
+    @hash_map = {Nave => EfectoDestructivo.new(100), Misil => EfectoDestructivo.new(80), Bomba => EfectoDestructivo.new(50), Asteroide => EfectoMasa.new(10,50), Estrella => EfectoConstructor.new}
   end
 
-  def obtener_nombre
-    return "nave"
-  end
 end

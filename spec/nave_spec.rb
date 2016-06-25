@@ -16,7 +16,7 @@ describe 'Nave' do
 
   it 'deberia retornar nave cuando hago obtener_nombre' do
     nave = Nave.new(10,10)
-    expect(nave.obtener_nombre).to eq "nave"
+    expect(nave.obtener_nombre).to eq Nave
   end
 
   it 'deberia retornar 0 cuando hago chocar_con(nave)' do

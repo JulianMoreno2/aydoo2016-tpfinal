@@ -16,7 +16,7 @@ describe 'Estrella' do
   
   it 'deberia retornar estrella cuando hago obtener_nombre' do
     estrella = Estrella.new(10,10)
-    expect(estrella.obtener_nombre).to eq "estrella"
+    expect(estrella.obtener_nombre).to eq Estrella
   end
 
   it 'deberia retornar 0 cuando hago chocar_con(estrella)' do

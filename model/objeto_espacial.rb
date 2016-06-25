@@ -30,6 +30,10 @@ class ObjetoEspacial
     @estado = estado
   end
   
+  def obtener_nombre
+    self.class
+  end
+
   def chocar_con(objeto_espacial)
     if self.obtener_vida != 0 && objeto_espacial.obtener_vida != 0
       mapa_efectos

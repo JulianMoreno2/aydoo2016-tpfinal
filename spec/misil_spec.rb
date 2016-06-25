@@ -15,7 +15,7 @@ describe 'Misil' do
 
   it 'deberia retornar misil cuando hago obtener_nombre' do
     misil = Misil.new(10,10)
-    expect(misil.obtener_nombre).to eq "misil"
+    expect(misil.obtener_nombre).to eq Misil
   end
   
   it 'deberia retornar 0 cuando hago chocar_con(misil)' do

@@ -15,7 +15,7 @@ describe 'Bomba' do
   
   it 'deberia retornar bomba cuando hago obtener_nombre' do
     bomba = Bomba.new(10,10)
-    expect(bomba.obtener_nombre).to eq "bomba"
+    expect(bomba.obtener_nombre).to eq Bomba
   end
 
   it 'deberia retornar 0 cuando hago chocar_con(bomba)' do

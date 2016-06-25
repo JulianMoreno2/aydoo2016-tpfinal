@@ -16,7 +16,7 @@ describe 'Asteroide' do
 
   it 'deberia retornar asteroide cuando hago obtener_nombre' do
     asteroide = Asteroide.new(10,10)
-    expect(asteroide.obtener_nombre).to eq "asteroide"
+    expect(asteroide.obtener_nombre).to eq Asteroide
   end
   
   it 'deberia retornar 100 cuando asteroide chocar_con(asteroide)' do

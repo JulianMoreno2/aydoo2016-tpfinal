@@ -16,5 +16,9 @@ describe 'ObjetoEspacial' do
     objEspacial = ObjetoEspacial.new(100,100)
     expect(objEspacial.obtener_estado.mostrar).to eq "construido"
   end
-
+  
+  it 'deberia retornar ObjetoEspacial cuando hago obtener_nombre' do
+    objEspacial = ObjetoEspacial.new(100,100)
+    expect(objEspacial.obtener_nombre).to eq ObjetoEspacial
+  end
 end
