@@ -1,3 +1,5 @@
+require_relative '../model/numero_invalido_exception'
+
 class ObjetoEspacial
 
   def initialize
@@ -15,7 +17,10 @@ class ObjetoEspacial
   end
 
   def modificar_vida(vida)
-  	@vida = vida
+    if vida < 0
+      raise NumeroInvalidoException, "La vida ingresada debe ser mayor a cero"
+    end
+    @vida = vida
   end
 
   def modificar_masa(masa)

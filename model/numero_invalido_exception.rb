@@ -1,0 +1,3 @@
+class NumeroInvalidoException < RuntimeError
+
+end
