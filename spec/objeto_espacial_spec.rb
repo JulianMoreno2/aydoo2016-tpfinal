@@ -28,4 +28,9 @@ describe 'ObjetoEspacial' do
     expect(objEspacial.obtener_vida).to eq 100
   end
 
+  it 'deberia crearse el ObjetoEspacial con 100 de masa por defecto' do
+    objEspacial = ObjetoEspacial.new
+    expect(objEspacial.obtener_masa).to eq 100
+  end
+  
 end
