@@ -1,8 +1,8 @@
 class ObjetoEspacial
 
-  def initialize(vida, masa)
-    @vida = vida
-    @masa = masa
+  def initialize
+    @vida = 100
+    @masa = 100
     @estado = EstadoConstruido.new
   end
 
