@@ -1,6 +1,6 @@
 class EstadoDestruido
 
-  def mostrar_estado
+  def mostrar
     "destruido"
   end
   

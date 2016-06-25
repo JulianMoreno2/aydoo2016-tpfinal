@@ -22,30 +22,35 @@ describe 'Estrella' do
   it 'deberia retornar 0 cuando hago chocar_con(estrella)' do
     estrella = Estrella.new(300,100)
     estrella1 = Estrella.new(200,100)
-    expect(estrella.chocar_con(estrella1)).to eq 0
+    estrella.chocar_con(estrella1)
+    expect(estrella.obtener_vida).to eq 0
   end
 
   it 'deberia retornar 0 cuando estrella choca_con(asteroide)' do
     estrella = Estrella.new(200,100)
     asteroide = Asteroide.new(100,80)
-    expect(estrella.chocar_con(asteroide)).to eq 0
+    estrella.chocar_con(asteroide)
+    expect(estrella.obtener_vida).to eq 0
   end
 
   it 'deberia retornar 0 cuando estrella choca_con(bomba)' do
     estrella = Estrella.new(200,100)
     bomba = Bomba.new(100,80)
-    expect(estrella.chocar_con(bomba)).to eq 0
+    estrella.chocar_con(bomba)
+    expect(estrella.obtener_vida).to eq 0
   end
 
   it 'deberia retornar 200 cuando estrella choca_con(misil)' do
     estrella = Estrella.new(200,100)
     misil = Misil.new(100,80)
-    expect(estrella.chocar_con(misil)).to eq 200
+    estrella.chocar_con(misil)
+    expect(estrella.obtener_vida).to eq 200
   end
 
   it 'deberia retornar 0 cuando estrella choca_con(nave)' do
     estrella = Estrella.new(200,100)
     nave = Nave.new(100,80)
-    expect(estrella.chocar_con(nave)).to eq 0
+    estrella.chocar_con(nave)
+    expect(estrella.obtener_vida).to eq 0
   end
 end

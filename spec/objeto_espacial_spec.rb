@@ -14,6 +14,7 @@ describe 'ObjetoEspacial' do
     
   it 'deberia retornar estado construido se crea el objeto espacial' do
     objEspacial = ObjetoEspacial.new(100,100)
-    expect(objEspacial.obtener_estado.mostrar_estado).to eq "construido"
+    expect(objEspacial.obtener_estado.mostrar).to eq "construido"
   end
+
 end

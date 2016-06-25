@@ -22,19 +22,22 @@ describe 'Nave' do
   it 'deberia retornar 0 cuando hago chocar_con(nave)' do
     nave = Nave.new(100,100)
     nave1 = Nave.new(100,100)
-    expect(nave.chocar_con(nave1)).to eq 0
+    nave.chocar_con(nave1)
+    expect(nave.obtener_vida).to eq 0
   end
 
   it 'deberia retornar 20 cuando nave choca_con(misil)' do
     nave = Nave.new(100,100)
     misil = Misil.new(100,80)
-    expect(nave.chocar_con(misil)).to eq 20
+    nave.chocar_con(misil)
+    expect(nave.obtener_vida).to eq 20
   end
 
   it 'deberia retornar 30 cuando nave choca_con(bomba)' do
     nave = Nave.new(80,100)
     bomba = Bomba.new(100,80)
-    expect(nave.chocar_con(bomba)).to eq 30
+    nave.chocar_con(bomba)
+    expect(nave.obtener_vida).to eq 30
   end
 
   it 'deberia retornar 50 cuando nave choca_con(asteroide)' do
@@ -44,10 +47,11 @@ describe 'Nave' do
     expect(nave.obtener_masa).to eq 50
   end
   
-  it 'deberia retornar 200 cuando nave choca_con(estrella)' do
+  it 'deberia retornar 280 cuando nave choca_con(estrella)' do
     nave = Nave.new(100,180)
     estrella = Estrella.new(100,100)
-    expect(nave.chocar_con(estrella)).to eq 280
+    nave.chocar_con(estrella)
+    expect(nave.obtener_masa).to eq 280
   end
 
   it 'deberia retornar 0 cuando nave choca_con(nave1) nave1 pierde 100 unidades' do
@@ -85,4 +89,11 @@ describe 'Nave' do
     expect(estrella.obtener_vida).to eq 0
   end
 
+  it 'deberia retornar estado destruido si la vida de la nave llega a cero al chocar con otro objeto espacial' do
+    nave = Nave.new(100,100)
+    nave1 = Nave.new(100,100)
+    nave.chocar_con(nave1)
+    expect(nave.obtener_estado.mostrar).to eq "destruido"
+  end
+  
 end

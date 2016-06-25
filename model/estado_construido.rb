@@ -1,6 +1,6 @@
 class EstadoConstruido
 
-  def mostrar_estado
+  def mostrar
     "construido"
   end
   

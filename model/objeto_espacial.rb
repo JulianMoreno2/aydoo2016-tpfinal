@@ -25,6 +25,10 @@ class ObjetoEspacial
   def obtener_estado
     @estado
   end
+
+  def modificar_estado(estado)
+    @estado = estado
+  end
   
   def chocar_con(objeto_espacial)
     mapa_efectos
@@ -35,6 +39,9 @@ class ObjetoEspacial
   
   def recibe_choque_de(objeto_espacial)
     @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(self,objeto_espacial)
+    if obtener_vida == 0
+      modificar_estado(EstadoDestruido.new)
+    end
   end
 
 end
