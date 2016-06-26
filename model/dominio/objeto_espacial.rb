@@ -47,10 +47,13 @@ class ObjetoEspacial
       mapa_efectos
       objeto_espacial.mapa_efectos
       
+      #Es necesario guardarme los atributos del objeto_espacial
+      #para no pisarlos cuando choque contra el otro objeto_espacial
       objeto_espacial_aux = objeto_espacial.class.new
       objeto_espacial_aux.modificar_vida(objeto_espacial.obtener_vida)
       objeto_espacial_aux.modificar_masa(objeto_espacial.obtener_masa)
-
+      
+      #Idem comentario anterior
       self_aux = self.class.new
       self_aux.modificar_vida(self.obtener_vida)
       self_aux.modificar_masa(self.obtener_masa)
