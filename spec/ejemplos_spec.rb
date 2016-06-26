@@ -40,4 +40,15 @@ describe 'Ejemplos' do
     estrella.chocar_con(misil)
     expect(misil.obtener_vida).to eq 10
   end
+
+  it 'Una Bomba (vida=200, masa=90) choca con otra Bomba (vida=20, masa=45)' do
+    bomba = Bomba.new
+    bomba1 = Bomba.new
+    bomba.modificar_vida(200)
+    bomba.modificar_masa(90)
+    bomba1.modificar_vida(20)
+    bomba1.modificar_masa(45)
+    bomba.chocar_con(bomba1)
+    expect(bomba.obtener_vida).to eq 100
+  end
 end
