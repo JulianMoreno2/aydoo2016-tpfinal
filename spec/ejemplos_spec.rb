@@ -82,4 +82,14 @@ describe 'Ejemplos' do
     bomba.chocar_con(asteroide)
     expect(asteroide.obtener_vida).to eq 30
   end
+  
+  it 'Una Nave (vida=100, masa=100) choca con una Estrella (vida=50, masa=50)' do
+    nave = Nave.new
+    estrella = Estrella.new
+    estrella.modificar_vida(50)
+    estrella.modificar_masa(50)
+    nave.chocar_con(estrella)
+    expect(nave.obtener_vida).to eq 150
+  end
+  
 end

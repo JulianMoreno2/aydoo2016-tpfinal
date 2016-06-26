@@ -46,8 +46,17 @@ class ObjetoEspacial
     if self.obtener_vida != 0 && objeto_espacial.obtener_vida != 0
       mapa_efectos
       objeto_espacial.mapa_efectos
-      objeto_espacial.recibe_choque_de(self)
-      self.recibe_choque_de(objeto_espacial)
+      
+      objeto_espacial_aux = objeto_espacial.class.new
+      objeto_espacial_aux.modificar_vida(objeto_espacial.obtener_vida)
+      objeto_espacial_aux.modificar_masa(objeto_espacial.obtener_masa)
+
+      self_aux = self.class.new
+      self_aux.modificar_vida(self.obtener_vida)
+      self_aux.modificar_masa(self.obtener_masa)
+      
+      objeto_espacial.recibe_choque_de(self_aux)
+      self.recibe_choque_de(objeto_espacial_aux)
     end
   end
   
