@@ -29,4 +29,15 @@ describe 'Ejemplos' do
     estrella.chocar_con(misil)
     expect(estrella.obtener_vida).to eq 50
   end
+
+  it 'Una Estrella (vida=50, masa=10) choca con un Misil (vida=10, masa=30)' do
+    estrella = Estrella.new
+    misil = Misil.new
+    estrella.modificar_vida(50)
+    estrella.modificar_masa(10)
+    misil.modificar_vida(10)
+    misil.modificar_masa(30)
+    estrella.chocar_con(misil)
+    expect(misil.obtener_vida).to eq 10
+  end
 end
