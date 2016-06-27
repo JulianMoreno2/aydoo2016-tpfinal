@@ -1,5 +1,5 @@
 class EfectoDestructivo
-  
+
   def initialize(vida_destruida)
   	@vida_destruida = vida_destruida
   end
@@ -12,4 +12,5 @@ class EfectoDestructivo
     end
     return objeto1.obtener_vida
   end
+
 end
