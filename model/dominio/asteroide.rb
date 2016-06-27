@@ -5,7 +5,7 @@ require_relative '../efectos/efecto_masa'
 class Asteroide < ObjetoEspacial
 
   def mapa_efectos
-  	@hash_map = {Asteroide => EfectoNulo.new,
+    @hash_map = {Asteroide => EfectoNulo.new,
                  Bomba => EfectoNulo.new,
                  Misil => EfectoNulo.new,
                  Nave => EfectoMasa.new(10),
