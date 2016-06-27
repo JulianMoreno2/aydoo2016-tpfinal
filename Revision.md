@@ -25,3 +25,27 @@ Respuesta: No lo acepto. Me parece que modelar el estado del objeto espacial es 
 * Observación 04: La excepción 'NumeroInvalidoException' no lanza ningún mensaje detallado de por qué es inválido el número o que números son los validos para insertar. Recomiendo que cuando se lanze esa excepción haya algún mensaje acompañado.
 
 Respuesta: No lo acepto. La excepcion NumeroInvalidoException hereda de RuntimeError y se lanza un mensaje con 'raise' cuando la vida o la masa que se ingresa es negativa. Por lo tanto, cuando se lanza la excepcion, tiene un mensaje acompañado.
+
+----------
+
+* Observación 05: Las 71 pruebas corren todas ok.
+
+Respuesta: - Ok
+
+----------
+
+* Observación 06: En el diagrama de clases hay problemas de notación. Todas las clases que hereden de otra, también deben ser colocados los atributos y métodos heredados de la clase padre.
+
+Respuesta: Aceptado en parte. Solo los metodos que sobreescribo son los que tendria que poner en las subclases, vease en la clase Efecto, yo redefino el metodo ejecutar_efecto en cada subclase de efecto.
+
+----------
+
+* Observación 07: Sigue habiendo problemas de identaciones en las clases del dominio: Nave, Misil, etc. Específicamente cuando se define el Hash Map para cada una de ellas.
+
+Respuesta: Aceptado. Reubico uno debajo del otro el par clave-valor de los hash map.
+
+----------
+
+* Observación 08: Recomiendo que los dos estados colocados en el modelado de la solución, hereden de una superclase 'Estado', mejoraría mucho la claridad del código.
+
+Respuesta: Aceptado. Creo la clase Estado solo para que el codigo tenga una mejor lectura.

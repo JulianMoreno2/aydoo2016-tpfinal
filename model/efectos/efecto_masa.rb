@@ -1,7 +1,9 @@
-class EfectoMasa
+require_relative '../efectos/efecto'
+
+class EfectoMasa < Efecto
 
   def initialize(masa_ganada)
-  	@masa_ganada = masa_ganada
+    @masa_ganada = masa_ganada
   end
 
   def ejecutar_efecto(objeto1,objeto2)
