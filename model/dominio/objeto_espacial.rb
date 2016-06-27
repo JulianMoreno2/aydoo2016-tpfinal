@@ -13,12 +13,14 @@ class ObjetoEspacial
   end
 
   def obtener_masa
-  	@masa
+    @masa
   end
 
   def modificar_vida(vida)
     if vida < 0
       raise NumeroInvalidoException, "La vida ingresada debe ser mayor a cero"
+    elsif vida == 0
+      modificar_estado(EstadoDestruido.new)
     end
     @vida = vida
   end
@@ -43,7 +45,7 @@ class ObjetoEspacial
   end
 
   def chocar_con(objeto_espacial)
-    if self.obtener_vida != 0 && objeto_espacial.obtener_vida != 0
+    if self.obtener_estado.mostrar == "construido" && objeto_espacial.obtener_estado.mostrar == "construido"
       mapa_efectos
       objeto_espacial.mapa_efectos
       
@@ -62,12 +64,9 @@ class ObjetoEspacial
       self.recibe_choque_de(objeto_espacial_aux)
     end
   end
-  
+
   def recibe_choque_de(objeto_espacial)
     @hash_map[objeto_espacial.obtener_nombre].ejecutar_efecto(self,objeto_espacial)
-    if obtener_vida == 0
-      modificar_estado(EstadoDestruido.new)
-    end
   end
 
 end
