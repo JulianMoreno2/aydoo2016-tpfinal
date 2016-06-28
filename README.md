@@ -1,7 +1,9 @@
 # aydoo2016-tpfinal
 Repositorio del tp final de Analisis y Diseño Orientado a Objetos
 
-Para resolver el problema del Viaje Espacial, utilice dos patrones, por un lado el patron Comando, y por el otro, el patron State.
+En primera instancia se me habia ocurrido implementar el patron mediador, donde una clase se ocupaba de resolver los choques, pero luego en base a lo aprendido, me di cuenta de que cada objeto debia resolver el problema en base al objeto con el que chocaba.
+
+Entonces para resolver el problema del Viaje Espacial, utilice dos patrones, por un lado el patron Comando, y por el otro, el patron State.
 
 El patron Comando consiste en guardar en cada objeto espacial un mapa en el cual contiene el efecto que debe ejecutar de acuerdo a la clase que se le pase.
 De esta manera, puedo asegurar que se va a ejecutar el efecto correspondiente al choque.
